@@ -3,16 +3,26 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: "Orbitron", sans-serif;
 }
 
 body {
     background-color: #2b2928;
 }
 
+#grid-canvas {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 #bgCanvas {
   position: absolute;
   top: 0;
+  width: 100%;
+  height: 100%;
   left: 0;
+  z-index: 2;
 }
 
 .canvas-container {
@@ -42,19 +52,24 @@ body {
   );
   overflow: hidden;
   border: 2px solid #333;
-  width: calc(100vw - 120px);
-  height: calc(100vh - 120px);
-  margin: 20px;
-  font-family: "Orbitron", sans-serif; /* futuristic font */
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
+  margin: 20px auto;
+  z-index: 1;
+   /* futuristic font */
 }
 
 .neo-border h1 {
     position: absolute;
     bottom: 10px;
     left: 10px;
+    font-size: 80px;
 }
 
 .spacer {
   width: 100%;
   height: 100vh;
+  color: whitesmoke;
+  padding: 20px;
+  text-align: right;
 }

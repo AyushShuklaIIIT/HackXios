@@ -11,6 +11,7 @@ camera.position.set(0, 15, 30);
 camera.lookAt(0, 0, 0);
 
 const canvas = document.getElementById("bgCanvas");
+const container = document.querySelector(".canvas-wrapper");
 const renderer = new THREE.WebGLRenderer({
   antialias: true,
   alpha: true,
