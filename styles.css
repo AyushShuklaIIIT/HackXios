@@ -5,6 +5,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+    background-color: #2b2928;
+}
+
 #bgCanvas {
   position: absolute;
   top: 0;
@@ -24,7 +28,8 @@ html {
 
 .neo-border {
   position: relative;
-  background: #000;
+  background: #52504f;
+  opacity: 1;
   color: #eee;
   padding: 2rem;
   clip-path: polygon(
@@ -41,7 +46,6 @@ html {
   height: calc(100vh - 120px);
   margin: 20px;
   font-family: "Orbitron", sans-serif; /* futuristic font */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 .spacer {
