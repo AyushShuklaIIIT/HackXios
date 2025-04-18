@@ -37,10 +37,10 @@ const geometry = new THREE.CylinderGeometry(0.1, 0.1, 2.1, 32);
 const material = new THREE.MeshStandardMaterial({
   color: 0xffffff,
   metalness: 0,
-  roughtness: 0.9,
+  roughness: 0.9,
   side: THREE.DoubleSide,
   transparent: true,
-  opacity: 0.2,
+  opacity: 0.1,
   depthWrite: false,
 });
 
