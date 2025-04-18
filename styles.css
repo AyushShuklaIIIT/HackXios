@@ -167,31 +167,32 @@ body {
 .box:nth-child(1) {
   top: 20vh;
   left: 5vw;
-  transform: scale(0.95);
+  transform: scale(0.9);
 }
 
 .box:nth-child(2) {
   top: 40vh;
-  left: 55vw;
-  transform: scale(0.85);
+  left: 50vw;
+  transform: scale(0.8);
 }
 
 .box:nth-child(3) {
   top: 60vh;
   left: 10vw;
-  transform: scale(0.7);
+  transform: scale(0.65);
 }
 
 .box:nth-child(4) {
   top: 80vh;
-  left: 60vw;
-  transform: scale(0.7);
+  left: 55vw;
+  transform: scale(0.65);
 }
 
 .box:nth-child(5) {
   top: 100vh;
   left: 5vw;
-  transform: scale(0.95);
+  transform: scale(0.9);
+  margin-bottom: 300px;
 }
 
 .box img {
