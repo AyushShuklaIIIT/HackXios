@@ -4,6 +4,8 @@ html {
   padding: 0;
   overflow-x: hidden;
   font-family: "Orbitron", sans-serif;
+  cursor: url('public/aim.png') 16 16, crosshair;
+  color: #c5b6af;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 #bgCanvas {
   position: absolute;
@@ -28,7 +31,7 @@ body {
 .canvas-container {
   position: relative;
   margin: auto;
-  background-image: url(public/background.webp);
+  background-image: url(public/bgland.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,10 +41,9 @@ body {
 
 .neo-border {
   position: relative;
-  background: #52504f;
+  background: #52504f7c;
   opacity: 1;
-  color: #eee;
-  padding: 2rem;
+  padding: 1.5rem;
   clip-path: polygon(
     0% 0%,
     calc(100% - 30px) 0%,
@@ -52,11 +54,11 @@ body {
   );
   overflow: hidden;
   border: 2px solid #333;
-  width: calc(100vw - 100px);
-  height: calc(100vh - 100px);
-  margin: 20px auto;
+  width: calc(100vw - 120px);
+  height: calc(100vh - 120px);
+  margin: 30px auto;
   z-index: 1;
-  /* futuristic font */
+  margin-top: 60px;
 }
 
 .neo-border h1 {
@@ -69,7 +71,6 @@ body {
 .spacer {
   width: 100%;
   height: 100vh;
-  color: whitesmoke;
   padding: 20px;
   text-align: right;
 }
@@ -77,4 +78,199 @@ body {
 .spline {
     max-width: 1000px;
     margin: auto;
+}
+.slider {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.slider-track {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.slide img {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  padding: 5px;
+  clip-path: polygon(0 15%, 15% 0, 77% 0, 91% 14%, 91% 47%, 100% 59%, 100% 88%, 89% 100%, 33% 100%, 24% 85%, 8% 85%, 0 73%);
+}
+
+.slide img.stick-bottom {
+  height: 60%;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+} 
+
+#axios-intro {
+  margin: 50px;
+  position: absolute;
+  z-index: 5;
+
+}
+#team-members{
+  margin: 35px;
+  text-align: center;
+  font-size: 75px;
+}
+
+.box {
+  width: 800px;
+  position: relative;
+  height: 500px;
+  background-color: red;
+}
+
+.box:nth-child(1) {
+  top: 20vh;
+  left: 5vw;
+}
+
+.box:nth-child(2) {
+  top: 40vh;
+  left: 55vw;
+  transform: scale(0.9);
+}
+
+.box:nth-child(3) {
+  top: 60vh;
+  left: 10vw;
+  transform: scale(0.75);
+}
+
+.box:nth-child(4) {
+  top: 80vh;
+  left: 60vw;
+  transform: scale(0.75);
+}
+
+.box:nth-child(5) {
+  top: 100vh;
+  left: 5vw;
+}
+
+.ring-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pin-box {
+  position: relative;
+  z-index: 4;
+  width: 500px;
+  height: 500px;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.pin-box[style*="position: absolute"] {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.images-section {
+  position: relative;
+  z-index: 5;
+  height: 300vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: yellow;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
