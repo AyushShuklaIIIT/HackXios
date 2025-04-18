@@ -1,92 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My first three.js app</title>
-  <link rel="stylesheet" href="styles.css">
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first three.js app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
       }
-    }
-  </script>
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
-</head>
-<body>  
-  <nav class="navbar">
-    <div class="nav-container">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Compete</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">&#9776;</div>
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Compete</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </div>
+    </nav>
+    <canvas id="grid-canvas"></canvas>
+    <div class="neo-border">
+      <div class="canvas-container">
+        <canvas id="bgCanvas"></canvas>
+        <h1>Axios</h1>
+        <h2>Code. Create. Conquer.</h2>
+      </div>
     </div>
-  </nav> 
-  <canvas id="grid-canvas"></canvas>
-  <div class="neo-border">
-    <div class="canvas-container">
-      <canvas id="bgCanvas"></canvas>
-      <h1>Axios</h1>
-      <h2>Code. Create. Conquer.</h2>
+    <div id="axios-intro">
+      <h1>Axios isn't just a club website</h1>
+      <p>
+        It's a dev experience. Built by developers, for developers, this site
+        fuses clean design with powerful code to showcase everything from web to
+        app to game development. Smooth scrolls, animated sections, and a vibe
+        that screams “we don't just learn—we launch.” Welcome to Axios.
+        Ctrl+Alt+Create.
+      </p>
+      <p>
+        For developers. By developers. Showcasing code, creativity and impact.
+      </p>
     </div>
-  </div>
-  <div id="axios-intro">
-    <h1>Axios isn't just a club website</h1>
-    <p>It's a dev experience.
-      Built by developers, for developers, this site fuses clean design with powerful code to showcase everything from web to app to game development. Smooth scrolls, animated sections, and a vibe that screams “we don't just learn—we launch.” Welcome to Axios. Ctrl+Alt+Create.</p>
-      <p>For developers. By developers. Showcasing code, creativity and impact.</p>
-  </div>
 
-  <div class="spacer"></div>
-  <div class="ring-section">
-    <spline-viewer class="pin-box" url="https://prod.spline.design/OvuMEvYLBNfm9co5/scene.splinecode"></spline-viewer>
-  </div>
-  <div class="images-section">
-    <div class="box"><img src="public/AI ML.webp" alt=""></div>
-    <div class="box"><img src="public/APP.webp" alt=""></div>
-    <div class="box"><img src="public/cloud.webp" alt=""></div>
-    <div class="box"><img src="public/GAME.webp" alt=""></div>
-    <div class="box"><img src="public/web.webp" alt=""></div>
+    <div class="spacer"></div>
+    <div class="ring-section">
+      <spline-viewer
+        class="pin-box"
+        url="https://prod.spline.design/OvuMEvYLBNfm9co5/scene.splinecode"
+      ></spline-viewer>
+    </div>
+    <div class="images-section">
+      <div class="box"><img src="public/AI ML.webp" alt="" /></div>
+      <div class="box"><img src="public/APP.webp" alt="" /></div>
+      <div class="box"><img src="public/cloud.webp" alt="" /></div>
+      <div class="box"><img src="public/GAME.webp" alt="" /></div>
+      <div class="box"><img src="public/web.webp" alt="" /></div>
+    </div>
+    <div class="spacer"></div>
+    <div id="team-members"><h1>OUR TEAM</h1></div>
+    <div class="slider">
+      <div class="slider-track" id="slider-track">
+        <div class="slide">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1744754825046-71455f020060?q=80&w=1374&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+        <div class="slide"></div>
+        <div class="slide">
+          <img
+            class="stick-bottom"
+            src="https://images.unsplash.com/photo-1744144501177-5666f17e190c?q=80&w=1528&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+        <div class="slide"></div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1744063893861-3e703c13d1e4?q=80&w=1470&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+        <div class="slide"></div>
+        <div class="slide">
+          <img
+            class="stick-bottom"
+            src="https://images.unsplash.com/photo-1744063893861-3e703c13d1e4?q=80&w=1470&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+        <div class="slide"></div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1744654733851-d9c3276f42b0?q=80&w=1374&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+        <div class="slide"></div>
+        <div class="slide">
+          <img
+            class="stick-bottom"
+            src="https://images.unsplash.com/photo-1744144501177-5666f17e190c?q=80&w=1528&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+        <div class="slide"></div>
+      </div>
+    </div>
+    <div class="pixel-wave">
+      <div>
+        <h1>AXIOS</h1>
+        
+      </div>
+    </div>
 
-  </div>
-  <div class="spacer"></div>
-<div id="team-members"><h1>OUR TEAM</h1></div>
-<div class="slider">
-  <div class="slider-track" id="slider-track">
-    <div class="slide">
-      <img src="https://plus.unsplash.com/premium_photo-1744754825046-71455f020060?q=80&w=1374&auto=format&fit=crop" alt = ""/></div>
-    <div class="slide"></div>
-    <div class="slide"><img class="stick-bottom" src="https://images.unsplash.com/photo-1744144501177-5666f17e190c?q=80&w=1528&auto=format&fit=crop" alt = ""/></div>
-    <div class="slide"></div>
-    <div class="slide"><img src="https://images.unsplash.com/photo-1744063893861-3e703c13d1e4?q=80&w=1470&auto=format&fit=crop" alt = ""/></div>
-    <div class="slide"></div>
-    <div class="slide"><img class="stick-bottom" src="https://images.unsplash.com/photo-1744063893861-3e703c13d1e4?q=80&w=1470&auto=format&fit=crop" alt = ""/></div>
-    <div class="slide"></div>
-    <div class="slide"><img src="https://images.unsplash.com/photo-1744654733851-d9c3276f42b0?q=80&w=1374&auto=format&fit=crop" alt = ""/></div>
-    <div class="slide"></div>
-    <div class="slide"><img class="stick-bottom" src="https://images.unsplash.com/photo-1744144501177-5666f17e190c?q=80&w=1528&auto=format&fit=crop" alt = ""/></div>
-    <div class="slide"></div>
-  </div>
-</div>
-<div class="spacer"></div>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+    <div class="spacer"></div>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
-<script  type="module" src="team.js"></script>
-  <script type="module" src="main.js"></script>
-  <script type="module" src="grid.js"></script>
-  <script src="parallax.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-</body>
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <script type="module" src="team.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="grid.js"></script>
+    <script src="parallax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  </body>
 </html>
