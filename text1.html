@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Typing Effect</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      background-color: #111;
+      color: #00ffcc;
+    }
+
+    .scroll-space {
+      height: 300vh; /* Extra height for scrolling */
+    }
+
+    .type-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      text-align: center;
+      width: 80%;
+    }
+
+    #type-text::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-space"></div> <!-- Scrollable space -->
+
+  <div class="type-container">
+    <p id="type-text"></p>
+  </div>
+
+  <script>
+    const fullText = "Welcome to Craftown - Where Your Imagination Becomes Reality!";
+    const typeText = document.getElementById("type-text");
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = scrollTop / scrollHeight;
+
+      const totalChars = fullText.length;
+      const charsToShow = Math.floor(scrollPercent * totalChars);
+
+      typeText.textContent = fullText.substring(0, charsToShow);
+    });
+  </script>
+
+</body>
+</html>
