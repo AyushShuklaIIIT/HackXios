@@ -147,9 +147,8 @@ body {
 }
 
 .box {
-  width: 800px;
+  width: 35vw;
   position: relative;
-  height: 500px;
   padding:20px;
   border: 2px solid black;
 }
@@ -382,7 +381,7 @@ body {
 }
 
 .animate-text {
-  font-size: 5vw;
+  font-size: 4vw;
   overflow: hidden;
   text-transform: uppercase;
 }
