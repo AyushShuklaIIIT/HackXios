@@ -21,7 +21,7 @@ function drawGrid() {
   const gridSize = 55;
   const glowRadius = 125;
 
-  // Draw the grid lines with a solid color
+  
   ctx.strokeStyle = "#1f1f1f";
   ctx.lineWidth = 1;
 
@@ -34,7 +34,7 @@ function drawGrid() {
       let alpha = Math.max(0, 1 - distance / glowRadius);
       let glowColor = `rgba(255, 255, 0, ${alpha})`;
 
-      // Draw grid lines
+      
       ctx.beginPath();
       ctx.moveTo(x, y);
       ctx.lineTo(x + gridSize, y);
@@ -43,7 +43,7 @@ function drawGrid() {
       ctx.strokeStyle = "#1f1f1f";
       ctx.stroke();
 
-      // Draw glow effect around the cursor area
+      
       ctx.strokeStyle = glowColor;
       ctx.lineWidth = 2;
       ctx.strokeRect(x, y, gridSize, gridSize);

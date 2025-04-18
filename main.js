@@ -20,7 +20,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Lighting
+
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
 scene.add(ambientLight);
 
@@ -28,7 +28,7 @@ const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
 dirLight.position.set(10, 20, 10);
 scene.add(dirLight);
 
-// Transparent Rods
+
 const rods = [];
 const count = 70;
 const spacing = 0.25;
@@ -52,7 +52,7 @@ for (let i = 0; i < count; i++) {
   rods.push(rod);
 }
 
-// Animation loop
+
 function animate(time) {
   requestAnimationFrame(animate);
   time *= 0.001;
