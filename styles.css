@@ -64,8 +64,14 @@ body {
 .neo-border h1 {
   position: absolute;
   bottom: 10px;
-  left: 10px;
-  font-size: 80px;
+  left: 1.6vw;
+  font-size: 8rem;
+}
+
+.neo-border h2 {
+  position: absolute;
+  bottom: 60px;
+  left: 3vw;
 }
 
 .spacer {
@@ -131,8 +137,9 @@ body {
   margin: 50px;
   position: absolute;
   z-index: 5;
-
+  width: 50vw;
 }
+
 #team-members{
   margin: 35px;
   text-align: center;
@@ -143,35 +150,54 @@ body {
   width: 800px;
   position: relative;
   height: 500px;
-  background-color: red;
+  padding:20px;
+  border: 2px solid black;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  background: #52504f7c;
+  border-radius: 10px;
+  z-index: -1;
+  backdrop-filter: blur(8px);
 }
 
 .box:nth-child(1) {
   top: 20vh;
   left: 5vw;
+  transform: scale(0.95);
 }
 
 .box:nth-child(2) {
   top: 40vh;
   left: 55vw;
-  transform: scale(0.9);
+  transform: scale(0.85);
 }
 
 .box:nth-child(3) {
   top: 60vh;
   left: 10vw;
-  transform: scale(0.75);
+  transform: scale(0.7);
 }
 
 .box:nth-child(4) {
   top: 80vh;
   left: 60vw;
-  transform: scale(0.75);
+  transform: scale(0.7);
 }
 
 .box:nth-child(5) {
   top: 100vh;
   left: 5vw;
+  transform: scale(0.95);
+}
+
+.box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .ring-section {
